@@ -48,9 +48,15 @@ router.get('/post/:id', async (req, res) => {
 });
 
 // login
-router.get('/login', async (req, res) => {});
+router.get('/login', async (req, res) => {
+    req.session.loggedIn ? res.redirect('/')
+    : res.render('login');
+});
 
 // signup
-router.get('/signup', (req, res) => {});
+router.get('/signup', (req, res) => {
+    req.session.loggedIn ? res.redirect('/')
+    : res.render('signup');
+});
 
 module.exports = router;
