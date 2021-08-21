@@ -26,3 +26,22 @@ router.get('/new', (req, res) => {
         layout: 'dashboard'
     });
 });
+
+router.get('edit/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id);
+
+        if (postData) {
+            const post = postData.get({ plain: true });
+
+            res.render('edit', {
+                layout: 'dashboard',
+                post
+            })
+        } else {
+            res.status(404).end();
+        }
+    } catch (err) {
+        res.redirect('login');
+    }
+})
