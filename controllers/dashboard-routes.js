@@ -44,4 +44,6 @@ router.get('edit/:id', async (req, res) => {
     } catch (err) {
         res.redirect('login');
     }
-})
+});
+
+module.exports = router;
