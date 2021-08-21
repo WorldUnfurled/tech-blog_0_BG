@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Post } = require('../models/');
+const withAuth = require('../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
             where: {
@@ -21,13 +22,13 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/new', (req, res) => {
+router.get('/new', withAuth, (req, res) => {
     res.render('new', {
         layout: 'dashboard'
     });
 });
 
-router.get('edit/:id', async (req, res) => {
+router.get('edit/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
 
