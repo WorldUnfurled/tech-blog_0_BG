@@ -22,19 +22,37 @@ router.post('/', withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
     try {
-        const updatePost = await Post.update(req.body, {
+        const [ updatePost ] = await Post.update(req.body, {
             where: {
                 id: req.params.id
             }
         });
 
-        if (!updatePost) {
-            res.status(404).json({ message: 'Post not found.' });
-            return;
-        }
+        updatePost > 0 ? res.status(200).end()
+        : res.status(404).end();
 
-        res.json(updatePost);
     } catch (err) {
+
         res.status(500).json(err);
+        
     }
 });
+
+router.delete('/:id', withAuth, async (req, res) => {
+    try {
+        
+        const [ deletePost ] = Post.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+
+        deletePost > 0 ? res.status(200).end()
+        : res.status(404).end();
+
+    } catch (err) {
+        
+        res.status(500).json(err);
+
+    }
+})
