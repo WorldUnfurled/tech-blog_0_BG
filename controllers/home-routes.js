@@ -40,7 +40,7 @@ router.get('/post/:id', async (req, res) => {
             
             res.render('view-one', { post });
         } else {
-            res.status(500).json(err);
+            res.status(404).end();
         }
     } catch (err) {
         res.status(500).json(err);
@@ -55,6 +55,7 @@ router.get('/login', async (req, res) => {
 
 // signup
 router.get('/signup', (req, res) => {
+    console.log(req);
     req.session.loggedIn ? res.redirect('/')
     : res.render('signup');
 });

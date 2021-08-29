@@ -16,7 +16,7 @@ router.get('/', withAuth, async (req, res) => {
         res.render('view-all-admin', {
             layout: 'dashboard',
             posts
-        })
+        });
     } catch (err) {
         res.redirect('login');
     }
