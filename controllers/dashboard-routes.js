@@ -28,7 +28,7 @@ router.get('/new', withAuth, (req, res) => {
     });
 });
 
-router.get('edit/:id', withAuth, async (req, res) => {
+router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
 
@@ -38,7 +38,7 @@ router.get('edit/:id', withAuth, async (req, res) => {
             res.render('edit', {
                 layout: 'dashboard',
                 post
-            })
+            });
         } else {
             res.status(404).end();
         }

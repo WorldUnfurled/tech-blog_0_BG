@@ -3,13 +3,13 @@
     <h2>Edit Post</h2>
   </div>
   <form id="edit-post">
-    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <input type="hidden" name="post-id" id="edit-id" value="{{post.id}}" />
 
     <label for="post-title">Title</label>
-    <input type="text" name="post-title" value="{{post.title}}" />
+    <input type="text" name="post-title" id="edit-title" value="{{post.title}}" />
 
     <label for="post-content">Content</label>
-    <textarea name="post-content">{{post.content}}</textarea>
+    <textarea name="post-content" id="edit-content" rows=10 cols=50>{{post.content}}</textarea>
 
     <button type="submit">Update Post</button>
 

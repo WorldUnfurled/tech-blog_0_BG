@@ -51,7 +51,8 @@ router.delete('/:id', withAuth, async (req, res) => {
             }
         });
 
-        deletePost > 0 ? res.status(200).end()
+        deletePost > 0 
+        ? res.status(200).end()
         : res.status(404).end();
 
     } catch (err) {

@@ -185,6 +185,35 @@ main {
     margin: 20px; 
 }
 
+#edit-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border: 10px solid black;
+    border-radius: 20px;
+    color: white;
+}
+
+#edit-post h1 {
+    margin: 0 0 20px 0;
+    font-size: 36px;
+}
+
+#edit-post label {
+    font-size: 20px;
+}
+
+#edit-post input {
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    width: 50%;
+    border-radius: 10px;
+    border: 0;
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
