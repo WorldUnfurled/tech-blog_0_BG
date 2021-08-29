@@ -37,3 +37,16 @@ a {
     text-decoration: none;
 }
 
+header {
+    height: 50vh;
+    background-color: rgb(52, 52, 163);
+}
+
+main {
+    height: 50vh;
+    background-color: green;
+}
+
+#card {
+    position: relative;
+}
