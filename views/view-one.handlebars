@@ -11,7 +11,22 @@
     </div>
   </article>
 
-  {{#if post.comments}}
+  <form id="new-comment" class="card">
+    <div class="card-header">
+      <h3>Add a comment!</h3>
+    </div>
+
+    <div class="card-content">
+      <input type="hidden" id="comment-post-id" name="post-id" value="{{post.id}}" />
+
+      <label for="comment-content">Comment</label>
+
+      <textarea name="comment-content" id="comment-content" class="form-input"></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+
     <section class="card">
       <div class="card-header">
         <h3>Comments (Be Nice!)</h3>
@@ -24,29 +39,12 @@
               {{content}}
             </p>
             <p>
-              &mdash; {{User.username}}, {{format_date createdAt}}
+              &mdash; {{user.username}}, {{format_date createdAt}}
             </p>
           </div>
         {{/each}}
       </div>
     </section>
-  {{/if}}
-
-  <form id="new-comment" class="card">
-    <div class="card-header">
-      <h3>Add a comment!</h3>
-    </div>
-
-    <div class="card-content">
-      <input type="hidden" name="post-id" value="{{post.id}}" />
-
-      <label class="form-label" for="comment-content">Comment</label>
-
-      <textarea name="comment-content" class="form-input"></textarea>
-
-      <button type="submit" class="btn">Submit</button>
-    </div>
-  </form>
 </div>
 
 <script src="/js/comment.js"></script>

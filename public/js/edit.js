@@ -23,7 +23,7 @@ const editHandler = async e => {
 }
 
 const deleteHandler = async () => {
-    await fetch(`/api/post/${postId}`, {
+    await fetch(`/api/post/${post_id}`, {
         method: 'DELETE'
     });
     console.log('hi');
