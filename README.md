@@ -13,6 +13,10 @@
 
 A CMS-style blog site that allows publication of tech-related opinions.
 
+![cms_homepage](https://user-images.githubusercontent.com/80599137/131240782-4e70dc20-fbc7-4732-aa13-462deaa3b551.png)
+![cms_login](https://user-images.githubusercontent.com/80599137/131240786-87ebaf86-d07f-4b38-998c-5231bd06349c.png)
+![cms_create](https://user-images.githubusercontent.com/80599137/131240787-7b60d2ca-838a-44b2-94aa-300cd71b3c6b.png)
+
 ## Installing
 
 The npm packages used for this are as follows:
