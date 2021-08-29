@@ -55,7 +55,6 @@ router.get('/login', async (req, res) => {
 
 // signup
 router.get('/signup', (req, res) => {
-    console.log(req);
     req.session.loggedIn ? res.redirect('/')
     : res.render('signup');
 });

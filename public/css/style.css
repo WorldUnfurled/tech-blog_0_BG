@@ -35,18 +35,79 @@ nav ul li a {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 header {
     height: 50vh;
     background-color: rgb(52, 52, 163);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: white !important;
 }
 
 main {
-    height: 50vh;
+    height: 100%;
+    min-height: 50vh;
     background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #card {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border: 10px solid black;
+    border-radius: 20px;
+    color: white;
+}
+
+#signup-form h1 {
+    margin: 0 0 20px 0;
+    font-size: 36px;
+}
+
+#signup-form label {
+    font-size: 20px;
+}
+
+#signup-form input {
+    /* display: block; */
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    width: 50%;
+    border-radius: 10px;
+    border: 0;
+}
+
+button {
+    font-size: 16px;
+    margin: 12px;
+    padding: 7px;
+    border: 0;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+footer {
+    height: 100%;
+    background-color: var(--nav-color);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
