@@ -1,8 +1,14 @@
 <div class="posts">
   {{#each posts}}
-    <a class="list-item" href="/dashboard/edit/{{id}}">
-      {{title}}
-      {{format_date createdAt}}
-    </a>
+     <article class="card" id="post-card">
+    <div class="card-header">
+      <h2>
+        <a href="/dashboard/edit/{{id}}">{{title}}</a>
+      </h2>
+      <div>
+        Posted on {{format_date createdAt}}
+      </div>
+    </div>
+  </article>
   {{/each}}
 </div>
